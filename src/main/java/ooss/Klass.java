@@ -5,8 +5,10 @@ import java.util.*;
 public class Klass extends EventManager {
 
     private int id;
+    //TODO: make id final
     private Student studentLeader;
-    private List<Person> personList = new ArrayList<>();
+    private final List<Person> personList = new ArrayList<>();
+     //TODO: personList was updated but the list was never used
 
     public Klass(int id) {
         this.id = id;

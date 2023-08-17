@@ -8,6 +8,7 @@ public class Student extends Person implements EventListener {
     private Klass klass;
 
     private String name;
+    //TODO: unused variable
 
     public Student(int id, String name, int age) {
         super(id, name, age);
@@ -23,7 +24,7 @@ public class Student extends Person implements EventListener {
                 .filter(studentKlass -> isIn(studentKlass))
                 .map(studentKlass -> String.format(" I am in class %d.", studentKlass.getId()))
                 .orElse("");
-
+        //TODO: Can be changed lambda to method reference
         return String.format("%s I am a student.%s", super.introduce(), classIn);
     }
 

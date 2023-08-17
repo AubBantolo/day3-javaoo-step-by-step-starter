@@ -13,12 +13,12 @@ public class Teacher extends Person implements EventListener {
     @Override
     public String introduce(){
         String classIn = klassList.stream()
-                .filter(klass -> belongsTo(klass))
+                .filter(klass -> belongsTo(klass))      //TODO: Can be changed lambda to method reference
                 .map(klass -> String.valueOf(klass.getId()))
                 .reduce((klassResultId, klassId) -> klassResultId + ", " + klassId)
                 .map(klassResult -> String.format(" I teach Class %s.", klassResult))
                 .orElse("");
-
+                
         return String.format("%s I am a teacher.%s", super.introduce(), classIn);
 
     }

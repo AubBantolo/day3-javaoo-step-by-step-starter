@@ -5,7 +5,7 @@ import java.util.List;
 
 public abstract class EventManager {
     private List<EventListener> listenerList = new ArrayList<>();
-
+    //TODO: make listenerList final
     public List<EventListener> getListenerList() {
         return listenerList;
     }
